@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web", sans-serif;
+}
+
+.body {
+	background-color: rgb(177, 228, 177);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+	height: 100vh;
+}
+
+.logo {
+	height: 80px;
+	padding: 10px;
+	width: 90px;
+}
+
+.quote {
+	margin-left: 20px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+:root {
+	--mainColor: green;
+	--mainColorLight: #5767aa;
+	--secondaryColor: rgb(77, 197, 77);
+	--textColor: #eee;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	width: 100%;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+	position: relative;
+}
+
+.header-left {
+	display: flex;
+	align-items: center;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* Align nav items to the end (right) */
+	flex: 1;
+}
+
+nav a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+.log-out {
+	height: 40px;
+	width: 100px;
+	font-size: 16px;
+	cursor: pointer;
+	font-family: "Arial";
+	border-radius: 4px;
+	border: none;
+	color: black;
+	background-color: whitesmoke;
+	margin-left: 1rem;
+}
+
+.log-out:hover {
+	background-color: rgb(167, 166, 166);
+}
+
+.heading {
+	padding: 20px;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.card-arrange {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.row1, .row2 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 7px;
+	margin: 10px;
+	border: solid 1px white;
+	justify-content: center;
+	height: 190px;
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 190px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.users {
+	height: 50px;
+	width: 50px;
+}
+
+.count {
+	color: chocolate;
+	font-size: larger;
+}
+
+.books-icon {
+	height: 50px;
+	width: 50px;
+	color: rgb(8, 111, 103);
+	margin-bottom: 10px;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-button {
+	background-color: inherit;
+	color: black;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+  }
+  
+  .dropdown-button:hover {
+	background-color: #f1f1f1;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {
+	background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover.dropdown-content {
+	display: block;
+  }
+  
+  .dropdown:hover.dropdown-button {
+	background-color: #f1f1f1;
+  }
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--mainColor);
+		transition: transform 0.3s ease-in-out;
+		z-index: 10;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+		margin: 1rem 0;
+	}
+
+	.quote {
+		display: none;
+	}
+	.body{
+		height: 99.7vh;
+	}
+	header {
+		width: 100vw;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--mainColor);
+		transition: transform 0.3s ease-in-out;
+		z-index: 10;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+		margin: 1rem 0;
+	}
+
+	.heading {
+		font-size: 1.5rem;
+		margin: 10px 0;
+	}
+
+	.row1, .row2 {
+		width: 90%;
+		margin: 10px auto;
+	}
+
+	.books-icon {
+		height: 40px;
+		width: 40px;
+	}
+	.body {
+		height: 150vh;
+	}
+}
+@media only screen and (min-width: 1280px) {
+    .quote h4 {
+        font-size: 18px; /* Adjust font size for quote */
+    }
+
+    nav a {
+        font-size: 2rem; /* Adjust font size for nav links */
+    }
+
+    .header-left, .nav {
+        padding: 0 1rem; /* Reduce padding */
+    }
+	header {
+        width: 99.9vw; /* Ensure header takes full viewport width */
+    }
+	.logo {
+		margin-left: -30px;
+	}
+	.body {
+		height: 99.7vh;
+	}
+}
+@media screen and (min-width:700px) and (max-width:900px) {
+	.body {
+		height: 100vh;
+	}
+}
+@media screen  and (min-width:500px) and (max-width:800px){
+	.body{
+		height: 120vh;
+	}
+}
+@media screen and (min-width: 350px) and (max-width:380px){
+	.body{
+		height: 190vh;
+	}
+}

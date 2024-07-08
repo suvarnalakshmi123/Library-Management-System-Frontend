@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bg-Img {
+  background-image: url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg);
+  /* background-image: url(https://img.freepik.com/premium-photo/abstract-blur-library-blurred-book-shelves-hall-generative-ai_791316-6098.jpg); */
+  background-size: cover;
+  height: 120vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+.eye-icon {
+  position: absolute;
+  top: calc(70% - 10px);
+  right: 0.2rem;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.container {
+  max-width: 700px;
+ width: 400px; 
+  margin: 50px auto;
+  background-color: #eddbd5;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 20px;
+  border: #8b4513 solid 2px;
+ height: 790px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+  height: 70px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 20px); /* Adjusting for padding */
+    padding: 10px;
+    border-radius: 3px;
+   background-color: #fcfafa;
+    border: 1px solid #ccc;
+}
+.form-group .error { /* Added */
+  position: absolute;
+    top: 100%;
+    left: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+.form-group .sign-up-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.Login-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 40px;
+  border-radius: 3px;
+  background-color: orange;
+}
+.text {
+  margin: 10px;
+}
+@media screen and (min-width:1024px){
+  .bg-Img{
+    height: 140vh;
   }
 }
+
+
+
